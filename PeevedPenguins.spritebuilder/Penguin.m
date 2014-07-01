@@ -10,16 +10,5 @@
 
 @implementation Penguin
 
-//TEsting that everythin worked out Penguin initializer
-
-- (id)init {
-    self = [super init];
-    
-    if (self) {
-        CCLOG(@"Penguin created");
-    }
-    
-    return self;
-}
 
 @end

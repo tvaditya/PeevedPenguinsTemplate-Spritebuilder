@@ -10,15 +10,5 @@
 
 @implementation Seal
 
-//Testing everything worked out Seal initalizer
-- (id)init {
-    self = [super init];
-    
-    if (self) {
-        CCLOG(@"Seal created");
-    }
-    
-    return self;
-}
 
 @end
