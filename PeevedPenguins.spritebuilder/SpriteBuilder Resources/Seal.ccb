@@ -74,8 +74,8 @@
 			<key>points</key>
 			<array>
 				<array>
-					<real>13.5</real>
-					<real>12.5</real>
+					<real>12.5078125</real>
+					<real>12.125</real>
 				</array>
 			</array>
 			<key>polygons</key>
