@@ -10,6 +10,5 @@
 
 @implementation Seal
 
-Seal.collisionType = @"seal";
 
 @end
