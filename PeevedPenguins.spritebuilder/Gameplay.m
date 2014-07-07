@@ -35,8 +35,8 @@
    // _physicsNode.collisionDelegate = self;
     
     //Loding Level1
-    //CCScene *level = [CCBReader loadAsScene:@"Levels/Level1"];
-    //[_levelNode addChild:level];
+    CCScene *level = [CCBReader loadAsScene:@"Levels/Level1"];
+    [_levelNode addChild:level];
     
     // nothing shall collide with our invisible nodes
    // _pullbackNode.physicsBody.collisionMask = @[];
