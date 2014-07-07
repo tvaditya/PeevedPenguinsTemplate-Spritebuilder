@@ -30,6 +30,9 @@
     // visualize physics bodies & joints
     _physicsNode.debugDraw = TRUE;
     
+    // Collision delegation of our physics Node
+    _physicsNode.collisionDelegate = self;
+    
     //Loding Level1
     CCScene *level = [CCBReader loadAsScene:@"Levels/Level1"];
     [_levelNode addChild:level];
@@ -37,6 +40,9 @@
     // nothing shall collide with our invisible nodes
     _pullbackNode.physicsBody.collisionMask = @[];
     _mouseJointNode.physicsBody.collisionMask = @[];
+    
+    // Implementing collision type to know when seal are in a collision
+    self.physicsBody.collisionType = @"seal";
     
 }
 
@@ -135,7 +141,10 @@
     [_contentNode runAction:follow];
 }
 
-
+-(void)ccPhysicsCollisionPostSolve:(CCPhysicsCollisionPair *)pair seal:(CCNode *)nodeA wildcard:(CCNode *)nodeB
+{
+    CCLOG(@"Something collided with a seal!");
+}
 
 - (void)retry {
     // reload this level
