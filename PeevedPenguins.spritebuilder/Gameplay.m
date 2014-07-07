@@ -157,6 +157,7 @@
 // Remove seal method
 - (void)sealRemoved:(CCNode *)seal {
     [seal removeFromParent];
+    CCLOG(@"Seal removed!!");
 }
 - (void)retry {
     // reload this level
