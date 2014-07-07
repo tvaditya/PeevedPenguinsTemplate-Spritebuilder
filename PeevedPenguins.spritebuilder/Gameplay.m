@@ -43,7 +43,7 @@
     _mouseJointNode.physicsBody.collisionMask = @[];
     
     // Implementing collision type to know when seal are in a collision
-    //self.physicsBody.collisionType = @"seal";
+    self.physicsBody.collisionType = @"seal";
     
 }
 
@@ -142,7 +142,10 @@
     [_contentNode runAction:follow];
 }
 
-
+-(void)ccPhysicsCollisionPostSolve:(CCPhysicsCollisionPair *)pair seal:(CCNode *)nodeA wildcard:(CCNode *)nodeB
+{
+    CCLOG(@"Something collided with a seal!");
+}
 
 - (void)retry {
     // reload this level
