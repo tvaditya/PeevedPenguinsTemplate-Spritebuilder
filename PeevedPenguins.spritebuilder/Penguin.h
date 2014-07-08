@@ -10,4 +10,8 @@
 
 @interface Penguin : CCSprite
 
+//property to chek if penguin has been launched, avoid it from being lauc=nched while
+//background is still scrolling
+@property (nonatomic, assign) BOOL launched;
+
 @end
